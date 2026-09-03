@@ -136,6 +136,7 @@
 <body>
 <div id="root"></div>
 
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
 <script>
 // ---------------------------------------------------------------------------
 // SEMILLA DE DATOS — Ciclo 1 (el plan original de 20 semanas)
@@ -505,6 +506,7 @@ function render() {
       <div class="backup-actions">
         <button class="btn-ghost" data-action="export">Descargar respaldo</button>
         <button class="btn-ghost" data-action="share">Compartir a Drive</button>
+        <button class="btn-ghost" data-action="export-excel">Exportar a Excel</button>
         <button class="btn-ghost" data-action="import">Restaurar respaldo</button>
         <button class="btn-ghost btn-danger" data-action="reset">Reiniciar progreso</button>
       </div>
@@ -512,7 +514,7 @@ function render() {
 
     <div class="install-hint">
       <b>Acceso directo en el celular:</b> subí esta carpeta a un hosting gratis y abrí el link resultante en Chrome/Safari → "Agregar a pantalla de inicio".<br><br>
-      <b>Respaldo:</b> "Descargar respaldo" guarda el archivo en Descargas (siempre funciona). "Compartir a Drive" abre el menú nativo de compartir si tu navegador lo soporta. El respaldo incluye todos tus ciclos y tu progreso.
+      <b>Respaldo:</b> "Descargar respaldo" (.json) guarda el archivo que podés usar en "Restaurar respaldo" para recuperar todo tal cual estaba. "Exportar a Excel" (.xlsx) genera una planilla legible para revisar en Drive/Sheets — no se puede volver a importar, es solo para consulta.
     </div>
 
     <input type="file" id="import-input" accept="application/json" style="display:none">
@@ -635,6 +637,8 @@ function attachListeners() {
 
   const exportBtn = document.querySelector('[data-action="export"]');
   if (exportBtn) exportBtn.addEventListener("click", exportBackup);
+  const exportExcelBtn = document.querySelector('[data-action="export-excel"]');
+  if (exportExcelBtn) exportExcelBtn.addEventListener("click", exportExcel);
   const shareBtn = document.querySelector('[data-action="share"]');
   if (shareBtn) shareBtn.addEventListener("click", shareBackup);
   const importBtn = document.querySelector('[data-action="import"]');
@@ -887,6 +891,86 @@ function commitBuilder() {
 // ---------------------------------------------------------------------------
 // BACKUP: EXPORTAR / IMPORTAR / RESET
 // ---------------------------------------------------------------------------
+function getEffectiveExercise(prog, faseKey, fase, day, week, idx) {
+  const ov = fase.overridesSemana && fase.overridesSemana[week] && fase.overridesSemana[week][day];
+  const arr = (ov && ov[idx]) ? ov[idx] : fase.dias[day][idx];
+  return arr;
+}
+function getSlotFor(pk, fk, day, week, idx) {
+  const p = state.progreso;
+  return (p[pk] && p[fk] && p[pk][fk] && p[pk][fk][day] && p[pk][fk][day][week] && p[pk][fk][day][week][idx]) || { peso:"", obs:"", done:false };
+}
+function exportExcel() {
+  if (typeof XLSX === "undefined") {
+    showToast("No se pudo cargar el motor de Excel — revisá tu conexión a internet e intentá de nuevo.", true);
+    return;
+  }
+  try {
+    const detalle = [];
+    const resumen = [];
+    Object.keys(state.programs).forEach(pk => {
+      const prog = state.programs[pk];
+      let cicloDone = 0, cicloTotal = 0;
+      Object.keys(prog.fases).forEach(fk => {
+        const fase = prog.fases[fk];
+        let faseDone = 0, faseTotal = 0;
+        Object.keys(fase.dias).forEach(day => {
+          fase.semanas.forEach(week => {
+            fase.dias[day].forEach((_, idx) => {
+              const exArr = getEffectiveExercise(prog, fk, fase, day, week, idx);
+              const slot = (state.progreso[pk] && state.progreso[pk][fk] && state.progreso[pk][fk][day] &&
+                            state.progreso[pk][fk][day][week] && state.progreso[pk][fk][day][week][idx]) || { peso:"", obs:"", done:false };
+              faseTotal++; cicloTotal++;
+              if (slot.done) { faseDone++; cicloDone++; }
+              detalle.push({
+                "Ciclo": prog.nombre,
+                "Fase": fase.nombre,
+                "Día": day,
+                "Semana": week,
+                "Deload": fase.deload.includes(week) ? "Sí" : "",
+                "N°": idx + 1,
+                "Categoría": exArr[0],
+                "Ejercicio": exArr[1],
+                "Series": exArr[2],
+                "Peso": slot.peso || "",
+                "Observaciones": slot.obs || "",
+                "Realizado": slot.done ? "Sí" : "No",
+              });
+            });
+          });
+        });
+        resumen.push({
+          "Ciclo": prog.nombre,
+          "Fase": fase.nombre,
+          "Ejercicios completados": faseDone,
+          "Total ejercicios": faseTotal,
+          "% Cumplimiento": faseTotal ? Math.round((faseDone/faseTotal)*100) + "%" : "0%",
+        });
+      });
+      resumen.push({
+        "Ciclo": prog.nombre,
+        "Fase": "TOTAL DEL CICLO",
+        "Ejercicios completados": cicloDone,
+        "Total ejercicios": cicloTotal,
+        "% Cumplimiento": cicloTotal ? Math.round((cicloDone/cicloTotal)*100) + "%" : "0%",
+      });
+    });
+
+    const wb = XLSX.utils.book_new();
+    const wsResumen = XLSX.utils.json_to_sheet(resumen);
+    const wsDetalle = XLSX.utils.json_to_sheet(detalle);
+    wsResumen["!cols"] = [{wch:28},{wch:22},{wch:20},{wch:16},{wch:16}];
+    wsDetalle["!cols"] = [{wch:28},{wch:18},{wch:12},{wch:8},{wch:8},{wch:4},{wch:12},{wch:32},{wch:14},{wch:8},{wch:30},{wch:10}];
+    XLSX.utils.book_append_sheet(wb, wsResumen, "Resumen");
+    XLSX.utils.book_append_sheet(wb, wsDetalle, "Progreso detallado");
+    XLSX.writeFile(wb, `plan5fases-respaldo-${new Date().toISOString().slice(0,10)}.xlsx`);
+    showToast("Excel descargado — revisá tu carpeta Descargas.");
+  } catch (e) {
+    console.warn("Fallo exportExcel:", e);
+    showToast("No se pudo generar el Excel.", true);
+  }
+}
+
 function buildBackupPayload() {
   return {
     app: "plan5fases",
