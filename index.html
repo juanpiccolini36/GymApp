@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plan 5 Fases</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Plan 5 Fases">
+<meta name="theme-color" content="#14171A">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAYAAAA9zQYyAAAEf0lEQVR4nO3dMU4bQRSA4SXiCAgL2rQ0lLQ5U26R3CtlGtrUCA6QlhTIwnK8tnf9due9f/6vC1FgZ+fX03htlKubzf37IEF8aX0BUiSDFopBC8WghWLQQjFooRi0UAxaKAYtFIMWikELxaCFYtBCMWihGLRQDFooBi0UgxaKQQvFoIVi0EIxaKEYtFAMWigGLRSDFopBC8WghWLQQjFooRi0UAxaKAYtFIMWikELxaCFYtBCMWihGLRQDFooBi0UgxaKQQvFoIVi0EK5bn0BJM8/v87+tw/f/wReSb+ubjb3760voppLwp3K0Kcx6DOsGfApBn6cQY/IFPEY4/6fQe+oEPEY4/5g0EPtkPf1HnbXQZNC3tdr2F0GTQ55X29hdxV0TyHv6yXsbt4p7DnmYehn/fgJ3ctGTkGe1ugJbcyHke8LckKTNywabVrjJrQxT0O7X6igaZuzFtJ9Qxw5SBvSWvUjSPmgs8U8JwjCGrIoHXTrEJbcePLallQ26BYb3nKTe1vvXCWDXntzM23sWmv/9uPvMAzD8Pb6ssrPi1Iu6LU2NFPEY5a6F9uYtypFXSroNWKuEPK+yPuyH/NWlahRz6EvVTHmYYi77rGYKykzoZeczlVDPmTufTon5gpTusSENubzzVnPuZP5dnM3+XuvLf2EXipmWsiHnHPv5hwzMk/qEhM6Wg8xD8PpdRLOzPtSB73EdO4l5q2x9V4Sc+ajR9qgjTnO/rojJnPWqNMGHa3XmLe26yceM3alfFEYPZ17j3lX9GTN9gIx3YQ25ss9//41+nfRAWY7eqQLOlLPMa8ZdSapgo6czj3HPPbnXZFRZ5rSqYKOYsynvz4MzEmdJujWv6FR2bFoHx6fVrmGLFM6TdBRepvOl8ZMm9Ipgo6azsb8acpkjoo6w5ROEbSmy3DMyKh50E7n6ZaImTKlmwcdwZg/XDqZCedpRNC98JhxWtOgI44bvUzntWKOmNItjx1O6AKczOcz6OSMeZpmQXvcOK1VzJWPHU7ogpzM48oG3et0Xivmqo/wygZN1jrmypoE7SfrxpFibnGOdkIncuxFoM5TMmji+Tnj47mK5+iSQdNkjLkqg27MmGMZdEPGHO967R/Y2xOOQ9E+PD51E/Pt5m7Vs/jqQV+qygvCY8FWivnt9aX5h/an8MixgLmP37LFXJFBBzPmtgw6AWOOY9CB5k5n3yGMY9BCMWihrP7YrspjN32q9JkOJ7RQDDrQ3KcVPuWIY9BCMehgU6et0zmWQS/g3EiNOV7K/9aNZOzTdlqGQQvFI4dQDFooBi0UgxaKQQvFoIVi0EIxaKEYtFAMWigGLRSDFopBC8WghWLQQjFooRi0UAxaKAYtFIMWikELxaCFYtBCMWihGLRQDFooBi0UgxaKQQvFoIVi0EIxaKEYtFAMWigGLRSDFopBC8WghWLQQjFooRi0UAxaKAYtFIMWikELxaCFYtBCMWihGLRQDFooBi0UgxaKQQvFoIVi0EIxaKEYtFAMWigGLRSDFopBC8WghWLQQvkH3pNqt03SKqcAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" sizes="192x192" href="icon192.png">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html, body { margin:0; padding:0; background:#14171A; }
+  body {
+    color:#E8E6E1; font-family:'Inter',sans-serif;
+    padding: 0 1rem calc(3rem + env(safe-area-inset-bottom));
+    max-width:720px; margin:0 auto;
+  }
+  .sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    background: #14171A;
+    padding-top: calc(1rem + env(safe-area-inset-top));
+    padding-bottom: .5rem;
+    box-shadow: 0 8px 12px -6px rgba(0,0,0,.45);
+  }
+  .table-body { border-left:1px solid #2A2E33; border-right:1px solid #2A2E33; }
+  .table-edge-top { border-top-left-radius:8px; border-top-right-radius:8px; overflow:hidden; }
+  .table-edge-bottom { border-bottom-left-radius:8px; border-bottom-right-radius:8px; border-bottom:1px solid #2A2E33; }
+  .header{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #2A2E33;padding-bottom:.9rem;margin-bottom:.9rem;}
+  .header-right{display:flex;align-items:flex-start;gap:.6rem;}
+  .menu-wrap{position:relative;}
+  .menu-btn{background:#1B1E22;border:1px solid #2E3237;color:#ABB1B8;width:2rem;height:2rem;border-radius:4px;font-size:1.1rem;line-height:1;cursor:pointer;}
+  .menu-dropdown{display:none;position:absolute;right:0;top:2.4rem;background:#1B1E22;border:1px solid #2A2E33;border-radius:6px;min-width:180px;z-index:30;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.4);}
+  .menu-dropdown.open{display:block;}
+  .menu-item{display:block;width:100%;text-align:left;padding:.6rem .8rem;background:transparent;border:none;color:#E8E6E1;font-family:'IBM Plex Mono',monospace;font-size:.74rem;cursor:pointer;}
+  .menu-item:hover{background:#22262B;}
+  .edit-banner{background:#12202A;border:1px solid #2A4A5E;color:#9FC6DE;padding:.55rem .8rem;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1.5;margin-bottom:.9rem;}
+  .row-edit{background:#161A1E;}
+  .row-edited{background:#1E1A12;}
+  .edit-input{width:100%;background:#14171A;border:1px solid #3A3F45;color:#E8E6E1;font-family:'Inter',sans-serif;font-size:.76rem;padding:.3rem .4rem;border-radius:4px;}
+  .edit-input:focus{outline:none;border-color:#E8A33D;}
+  .edit-input-series{font-family:'IBM Plex Mono',monospace;font-size:.7rem;}
+  .reset-ex-btn{width:1.8rem;height:1.8rem;border-radius:4px;border:1px solid #3A2E12;background:#14171A;color:#E8A33D;cursor:pointer;margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:.9rem;}
+  .edited-mark{color:#E8A33D;font-size:.7rem;}
+  .toast{position:fixed;left:50%;bottom:1.2rem;transform:translateX(-50%) translateY(20px);background:#173B2E;border:1px solid #4FA88C;color:#E8E6E1;padding:.6rem 1rem;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;opacity:0;transition:opacity .25s, transform .25s;z-index:100;max-width:88%;text-align:center;pointer-events:none;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .toast-error{background:#3A1414;border-color:#D64545;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:#8A9099;margin-bottom:.15rem;}
+  .title{font-family:'Oswald',sans-serif;font-weight:600;text-transform:uppercase;letter-spacing:.04em;font-size:1.5rem;color:#E8A33D;margin:0;}
+  .macro-stat{text-align:right;}
+  .macro-num{font-family:'IBM Plex Mono',monospace;font-size:1.5rem;font-weight:600;color:#4FA88C;line-height:1;}
+  .macro-label{font-size:.6rem;color:#8A9099;text-transform:uppercase;letter-spacing:.06em;margin-top:.2rem;}
+  .tabs{display:flex;gap:.4rem;overflow-x:auto;padding-bottom:.3rem;-webkit-overflow-scrolling:touch;}
+  .tab{flex:none;padding:.45rem .9rem;border:1px solid #2E3237;border-radius:4px;background:#1B1E22;color:#ABB1B8;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.74rem;letter-spacing:.03em;cursor:pointer;}
+  .tab.active{background:#E8A33D;color:#14171A;border-color:#E8A33D;}
+  .phase-tabs{margin-bottom:.4rem;}
+  .fase-rango{font-family:'IBM Plex Mono',monospace;font-size:.7rem;color:#8A9099;margin-bottom:.8rem;}
+  .day-tabs{margin-bottom:.6rem;}
+  .week-row{display:flex;gap:.35rem;flex-wrap:wrap;margin-bottom:.8rem;}
+  .week-chip{padding:.3rem .65rem;border-radius:999px;border:1px solid #2E3237;background:#1B1E22;color:#ABB1B8;font-family:'IBM Plex Mono',monospace;font-size:.7rem;cursor:pointer;}
+  .week-chip.active{background:#5B8DBE;border-color:#5B8DBE;color:#0E1113;font-weight:600;}
+  .week-chip.deload{border-color:#D64545;color:#E88A8A;}
+  .week-chip.deload.active{background:#D64545;color:#14171A;}
+  .deload-banner{background:#2E1414;border:1px solid #D64545;color:#F2A5A5;padding:.55rem .8rem;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.76rem;margin-bottom:.9rem;}
+  .gauges-strip{display:flex;justify-content:space-around;background:#1B1E22;border:1px solid #2A2E33;border-radius:8px;padding:.6rem .4rem .3rem;margin-bottom:1rem;}
+  .gauge-wrap{text-align:center;}
+  .gauge-label{font-size:.62rem;color:#8A9099;text-transform:uppercase;letter-spacing:.04em;margin-top:-.2rem;}
+  .row{display:grid;grid-template-columns:1.3rem 3.6rem 1fr 3.4rem 3.6rem 2.8rem 2.1rem;gap:.4rem;align-items:center;padding:.55rem .4rem;border-bottom:1px solid #22262B;font-size:.8rem;}
+  .row:last-child{border-bottom:none;}
+  .row-head{background:#1B1E22;color:#8A9099;font-family:'IBM Plex Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;}
+  .row-done{background:#14201C;}
+  .col-n{color:#6B7178;font-family:'IBM Plex Mono',monospace;text-align:center;}
+  .col-series{font-family:'IBM Plex Mono',monospace;color:#ABB1B8;font-size:.7rem;}
+  .col-ex{line-height:1.25;}
+  .badge{font-family:'IBM Plex Mono',monospace;font-size:.56rem;padding:.15rem .32rem;border-radius:3px;text-transform:uppercase;white-space:nowrap;display:inline-block;}
+  .badge-ancla{background:#3A2E12;color:#E8A33D;border:1px solid #6B5220;}
+  .badge-fuerza{background:#10202C;color:#5B8DBE;border:1px solid #274B66;}
+  .badge-abdominales{background:#2C1D10;color:#C1734D;border:1px solid #5A3A22;}
+  .badge-cardio{background:#2C130B;color:#D9622B;border:1px solid #5C2A14;}
+  .peso-input{width:100%;background:#14171A;border:1px solid #2E3237;color:#E8E6E1;font-family:'IBM Plex Mono',monospace;font-size:.74rem;padding:.3rem .2rem;border-radius:4px;text-align:center;}
+  .peso-input:focus{outline:none;border-color:#5B8DBE;}
+  .obs-input{width:100%;background:#14171A;border:1px solid #2E3237;color:#ABB1B8;font-family:'Inter',sans-serif;font-size:.68rem;padding:.3rem .25rem;border-radius:4px;}
+  .obs-input:focus{outline:none;border-color:#E8A33D;color:#E8E6E1;}
+  .obs-input::placeholder{color:#4A4F55;}
+  .check-btn{width:1.8rem;height:1.8rem;border-radius:4px;border:1px solid #2E3237;background:#14171A;color:#4FA88C;font-weight:700;cursor:pointer;margin:0 auto;display:flex;align-items:center;justify-content:center;}
+  .check-btn.done{background:#173B2E;border-color:#4FA88C;}
+  .footer{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;font-family:'IBM Plex Mono',monospace;font-size:.68rem;flex-wrap:wrap;gap:.5rem;}
+  .save-indicator{color:#8A9099;}
+  .backup-actions{display:flex;gap:.5rem;flex-wrap:wrap;}
+  .btn-ghost{background:transparent;border:1px solid #2E3237;color:#ABB1B8;padding:.35rem .7rem;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.66rem;cursor:pointer;}
+  .btn-ghost:hover{background:#1B1E22;}
+  .btn-danger{border-color:#3A2020;color:#D68A8A;}
+  .btn-danger:hover{background:#2A1414;}
+  .install-hint{font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:#6B7178;background:#1B1E22;border:1px solid #2A2E33;border-radius:6px;padding:.6rem .7rem;margin-top:1rem;line-height:1.5;}
+  .install-hint b{color:#ABB1B8;}
+  .edit-scope-row{display:flex;align-items:center;flex-wrap:wrap;gap:.35rem;margin-top:.5rem;}
+  .week-override-banner{background:#12202A;border:1px solid #2A4A5E;color:#9FC6DE;padding:.5rem .75rem;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.7rem;margin-bottom:.9rem;}
+  @media (max-width:480px){
+    .row{grid-template-columns:1.1rem 3rem 1fr 2.9rem 3.1rem 2.4rem 1.9rem;gap:.3rem;font-size:.7rem;padding:.5rem .32rem;}
+    .title{font-size:1.25rem;}
+  }
+  .program-row{display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem;}
+  .program-select{flex:1;background:#1B1E22;border:1px solid #2E3237;color:#E8E6E1;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.72rem;letter-spacing:.03em;padding:.4rem .5rem;border-radius:4px;}
+  .btn-sm{font-size:.62rem;padding:.3rem .55rem;}
+
+  .builder{padding-top:calc(1rem + env(safe-area-inset-top));}
+  .builder-topbar{position:sticky;top:0;z-index:40;background:#14171A;display:flex;align-items:center;gap:.5rem;padding-bottom:.8rem;margin-bottom:1rem;border-bottom:1px solid #2A2E33;}
+  .builder-name{flex:1;font-family:'Oswald',sans-serif;text-transform:uppercase;letter-spacing:.03em;font-size:.9rem;color:#E8A33D;border-color:#3A2E12;}
+  .btn-save{background:#E8A33D;color:#14171A;border:none;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.72rem;letter-spacing:.03em;font-weight:600;padding:.5rem .9rem;border-radius:4px;cursor:pointer;}
+  .builder-fase{background:#1B1E22;border:1px solid #2A2E33;border-radius:8px;padding:.8rem;margin-bottom:1rem;}
+  .builder-fase-head{display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem;}
+  .builder-fase-head .edit-input{flex:1;}
+  .builder-rango{margin-bottom:.6rem;font-size:.72rem;color:#ABB1B8;}
+  .builder-semanas-row{display:flex;align-items:center;gap:.4rem;font-family:'IBM Plex Mono',monospace;font-size:.68rem;color:#8A9099;margin-bottom:.5rem;}
+  .week-num-input{width:3.4rem;background:#14171A;border:1px solid #2E3237;color:#E8E6E1;font-family:'IBM Plex Mono',monospace;font-size:.74rem;padding:.25rem .3rem;border-radius:4px;text-align:center;}
+  .builder-deload-row{display:flex;flex-wrap:wrap;gap:.3rem;align-items:center;margin-bottom:.8rem;}
+  .deload-label{font-family:'IBM Plex Mono',monospace;font-size:.66rem;color:#8A9099;margin-right:.2rem;}
+  .builder-dia{background:#14171A;border:1px solid #22262B;border-radius:6px;padding:.6rem;margin-bottom:.6rem;}
+  .builder-dia-head{display:flex;gap:.5rem;align-items:center;margin-bottom:.5rem;}
+  .builder-dia-head .edit-input{flex:1;}
+  .builder-ex-table{display:flex;flex-direction:column;gap:.35rem;margin-bottom:.5rem;}
+  .builder-ex-row{display:grid;grid-template-columns:5.2rem 1fr 4.4rem 1.8rem;gap:.35rem;align-items:center;}
+  .ex-cat-select{background:#1B1E22;border:1px solid #2E3237;color:#ABB1B8;font-family:'IBM Plex Mono',monospace;font-size:.62rem;padding:.3rem .2rem;border-radius:4px;}
+  .btn-add-fase{width:100%;background:transparent;border:1px dashed #3A3F45;color:#8A9099;font-family:'Oswald',sans-serif;text-transform:uppercase;font-size:.75rem;letter-spacing:.03em;padding:.7rem;border-radius:6px;cursor:pointer;margin-bottom:1rem;}
+  @media (max-width:480px){
+    .builder-ex-row{grid-template-columns:4.4rem 1fr 3.6rem 1.6rem;}
+  }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+// ---------------------------------------------------------------------------
+// SEMILLA DE DATOS — Ciclo 1 (el plan original de 20 semanas)
+// ---------------------------------------------------------------------------
+const SEED_FASES = {"fase1": {"nombre": "Fase 1", "rango": "Semanas 1-4 (RIR 2-3, volumen moderado)", "semanas": [1, 2, 3, 4], "deload": [], "dias": {"Lower A": [["Ancla", "Sentadilla con barra", "4x8"], ["Ancla", "Peso muerto rumano con barra", "3x10"], ["Fuerza", "Zancada caminando con mancuernas", "3x12 c/pierna"], ["Fuerza", "Sentadilla búlgara con mancuernas", "3x10 c/pierna"], ["Fuerza", "Puente de glúteo con barra", "3x12"], ["Fuerza", "Curl femoral en banco (mancuerna entre pies)", "3x10"], ["Fuerza", "Elevación de talones de pie", "4x15"], ["Abdominales", "Plancha frontal", "3x40seg"], ["Abdominales", "Elevación de piernas colgado/en banco", "3x15"], ["Cardio", "Farmer's walk con mancuernas 4x40m + marcha rodillas altas 3x30seg", "RPE 5-6"]], "Upper A": [["Ancla", "Press banca con barra", "4x8"], ["Ancla", "Remo con barra", "4x10"], ["Fuerza", "Press militar con mancuernas", "3x10"], ["Fuerza", "Remo unilateral con mancuerna", "3x10 c/lado"], ["Fuerza", "Aperturas con mancuernas", "3x12"], ["Fuerza", "Curl bíceps con barra", "3x12"], ["Fuerza", "Press francés con mancuerna", "3x12"], ["Abdominales", "Plancha lateral", "3x30seg c/lado"], ["Abdominales", "Crunch con peso", "3x15"], ["Cardio", "Remo con banda + jumping jacks, 3 rondas 40seg/20seg desc.", "RPE 5-6"]], "Lower B": [["Ancla", "Peso muerto convencional", "4x6"], ["Ancla", "Hip thrust con barra", "3x12"], ["Fuerza", "Peso muerto rumano a una pierna con mancuerna", "3x10 c/pierna"], ["Fuerza", "Sentadilla búlgara con mancuernas", "3x10 c/pierna"], ["Fuerza", "Hip thrust a una pierna", "3x10 c/pierna"], ["Fuerza", "Curl femoral nórdico asistido", "3x8"], ["Fuerza", "Extensión de cadera en cuadrupedia con banda", "3x12 c/lado"], ["Abdominales", "Dead bug", "3x12 c/lado"], ["Abdominales", "Pallof press con banda", "3x12 c/lado"], ["Cardio", "Step-ups con mancuernas 4x10 c/pierna + marcha lateral con banda 3x20m", "RPE 5-6"]], "Upper B": [["Ancla", "Press inclinado con mancuernas", "4x10"], ["Ancla", "Dominadas asistidas o jalón con banda", "4x8"], ["Fuerza", "Press militar con barra", "3x8"], ["Fuerza", "Remo con mancuerna a un brazo", "3x10 c/lado"], ["Fuerza", "Elevaciones laterales", "3x15"], ["Fuerza", "Face pull con banda", "3x15"], ["Fuerza", "Curl martillo", "3x12"], ["Abdominales", "Rueda abdominal (o plancha con deslizamiento)", "3x10"], ["Abdominales", "Giro ruso con mancuerna", "3x15 c/lado"], ["Cardio", "Soga/jumping jacks + burpees suaves, 3 rondas x 30seg", "RPE 5-6"]]}}, "fase2": {"nombre": "Fase 2", "rango": "Semanas 5-8 (RIR 1-2, +1 serie · deload semana 8)", "semanas": [5, 6, 7, 8], "deload": [8], "dias": {"Lower A": [["Ancla", "Sentadilla con barra", "5x6"], ["Ancla", "Peso muerto rumano con barra", "4x8"], ["Fuerza", "Zancada frontal con mancuernas", "4x10 c/pierna"], ["Fuerza", "Sentadilla sumo con mancuerna", "4x8 c/pierna"], ["Fuerza", "Hip thrust a una pierna", "4x10 c/pierna"], ["Fuerza", "Curl femoral nórdico asistido", "4x8"], ["Fuerza", "Elevación de talones sentado", "4x15"], ["Abdominales", "Plancha con toque de hombro", "3x40seg"], ["Abdominales", "Elevación de piernas colgado", "4x15"], ["Cardio", "EMOM 10min: 8 dumbbell swings + 10 mountain climbers", "RPE 7"]], "Upper A": [["Ancla", "Press banca con barra", "5x6"], ["Ancla", "Remo con barra", "5x8"], ["Fuerza", "Press militar con barra", "4x8"], ["Fuerza", "Remo renegado con mancuernas", "4x10 c/lado"], ["Fuerza", "Aperturas inclinadas con mancuernas", "4x12"], ["Fuerza", "Curl alterno con mancuernas", "4x10"], ["Fuerza", "Extensión de tríceps sobre la cabeza con mancuerna", "4x10"], ["Abdominales", "Plancha lateral con elevación de cadera", "3x12 c/lado"], ["Abdominales", "Crunch con peso (rango completo)", "4x15"], ["Cardio", "EMOM 8min: 10 burpees suaves + 15seg sprint en el lugar", "RPE 7"]], "Lower B": [["Ancla", "Peso muerto convencional", "5x5"], ["Ancla", "Hip thrust con barra", "4x10"], ["Fuerza", "Zancada estática con mancuernas", "4x10 c/pierna"], ["Fuerza", "Step-up con mancuernas", "4x8 c/pierna"], ["Fuerza", "Puente de glúteo con barra", "4x10"], ["Fuerza", "Curl femoral en banco", "4x10"], ["Fuerza", "Superman con extensión alterna", "4x12 c/lado"], ["Abdominales", "Dead bug con peso", "4x12 c/lado"], ["Abdominales", "Pallof press con banda (rodillas)", "4x12 c/lado"], ["Cardio", "AMRAP 8min: 10 step-ups c/pierna + 10 swings con mancuerna", "RPE 7"]], "Upper B": [["Ancla", "Press inclinado con mancuernas", "5x8"], ["Ancla", "Dominadas asistidas o jalón con banda", "5x8"], ["Fuerza", "Press Arnold con mancuernas", "4x8"], ["Fuerza", "Remo renegado con mancuernas", "4x10 c/lado"], ["Fuerza", "Elevaciones laterales con banda", "4x15"], ["Fuerza", "Y-raise con mancuernas", "4x15"], ["Fuerza", "Curl martillo con banco inclinado", "4x12"], ["Abdominales", "Rueda abdominal desde rodillas (rango extendido)", "4x10"], ["Abdominales", "Giro ruso con mancuerna (rango completo)", "4x15 c/lado"], ["Cardio", "Tabata 4min: jumping jacks/burpees suaves (20/10 x8)", "RPE 7"]]}}, "fase3": {"nombre": "Fase 3", "rango": "Semanas 9-11 (Diet break / mantenimiento, RIR 1)", "semanas": [9, 10, 11], "deload": [], "dias": {"Lower A": [["Ancla", "Sentadilla con barra", "5x5"], ["Ancla", "Peso muerto rumano con barra", "3x8"], ["Fuerza", "Zancada inversa con mancuernas", "3x10 c/pierna"], ["Fuerza", "Sentadilla goblet", "3x10"], ["Fuerza", "Empuje de cadera con banda (glute bridge)", "3x10"], ["Fuerza", "Curl femoral con banda tumbado", "3x10"], ["Fuerza", "Elevación de talones a una pierna", "3x15 c/pierna"], ["Abdominales", "Plancha frontal con elevación de pierna", "3x45seg"], ["Abdominales", "Rodillas al pecho colgado", "3x15"], ["Cardio", "Farmer's walk 3x40m", "RPE 5 (mantenimiento)"]], "Upper A": [["Ancla", "Press banca con barra", "5x5"], ["Ancla", "Remo con barra", "4x8"], ["Fuerza", "Press Arnold con mancuernas", "3x8"], ["Fuerza", "Remo con banda (unilateral)", "3x10 c/lado"], ["Fuerza", "Cruce con banda (aperturas de pie)", "3x12"], ["Fuerza", "Curl con banda", "3x10"], ["Fuerza", "Patada de tríceps con mancuerna", "3x10"], ["Abdominales", "Plancha lateral con rotación (hilo de aguja)", "3x30seg c/lado"], ["Abdominales", "Crunch bicicleta", "3x15"], ["Cardio", "Remo con banda + marcha, 3x40seg", "RPE 5"]], "Lower B": [["Ancla", "Peso muerto convencional", "5x5"], ["Ancla", "Hip thrust con barra", "3x10"], ["Fuerza", "Buenos días con barra", "3x10"], ["Fuerza", "Sentadilla goblet", "3x10"], ["Fuerza", "Patada de glúteo con banda (cuadrupedia)", "3x12 c/lado"], ["Fuerza", "Curl femoral con banda tumbado", "3x10"], ["Fuerza", "Extensión lumbar en banco (hiperextensión)", "3x12"], ["Abdominales", "Bird dog", "3x12 c/lado"], ["Abdominales", "Giro ruso suave (sin peso)", "3x15 c/lado"], ["Cardio", "Step-ups moderados 3x10 c/pierna", "RPE 5"]], "Upper B": [["Ancla", "Press inclinado con mancuernas", "5x6"], ["Ancla", "Dominadas asistidas o jalón", "4x8"], ["Fuerza", "Press militar con mancuernas (sentado)", "3x8"], ["Fuerza", "Remo con banda (unilateral)", "3x10 c/lado"], ["Fuerza", "Elevación frontal con mancuerna", "3x12"], ["Fuerza", "Remo alto con barra", "3x12"], ["Fuerza", "Curl con banda", "3x10"], ["Abdominales", "Plancha con deslizamiento de toalla/mancuerna", "3x10"], ["Abdominales", "Woodchopper con banda", "3x15 c/lado"], ["Cardio", "Jumping jacks suave 3x30seg", "RPE 5"]]}}, "fase4": {"nombre": "Fase 4", "rango": "Semanas 12-16 (RIR 1-2, densidad · deload semana 16)", "semanas": [12, 13, 14, 15, 16], "deload": [16], "dias": {"Lower A": [["Ancla", "Sentadilla con barra", "5x6"], ["Ancla", "Peso muerto rumano con barra", "4x8"], ["Fuerza", "Step-up con mancuernas (superserie #4)", "3x10 c/pierna"], ["Fuerza", "Sentadilla búlgara con pie elevado (superserie #3)", "3x10 c/pierna"], ["Fuerza", "Buenos días con barra (dropset última serie)", "4x10"], ["Fuerza", "Curl femoral de pie con banda", "4x10 c/pierna"], ["Fuerza", "Elevación de talones con pausa isométrica (dropset)", "4x15"], ["Abdominales", "Plancha con deslizamiento de mancuerna", "4x40seg"], ["Abdominales", "Elevación de piernas en banco declinado", "4x15"], ["Cardio", "AMRAP 10min: 10 step-ups c/pierna + 10 swings + 10 sentadillas con salto suave", "RPE 7-8"]], "Upper A": [["Ancla", "Press banca con barra", "5x6"], ["Ancla", "Remo con barra", "5x8"], ["Fuerza", "Push press con mancuernas (superserie #4)", "4x8"], ["Fuerza", "Remo Meadows improvisado en banco (superserie #3)", "4x10 c/lado"], ["Fuerza", "Pullover con mancuerna (dropset)", "4x12"], ["Fuerza", "Curl 21 con barra (superserie #7)", "4x10"], ["Fuerza", "Extensión de tríceps con banda (superserie #6)", "4x10"], ["Abdominales", "Plancha lateral con elevación de pierna", "4x12 c/lado"], ["Abdominales", "Crunch en polea/banda", "4x15"], ["Cardio", "EMOM 10min: 8 burpees + 10 flexiones", "RPE 7-8"]], "Lower B": [["Ancla", "Peso muerto convencional", "5x5"], ["Ancla", "Hip thrust con barra (dropset)", "4x10"], ["Fuerza", "Peso muerto sumo con mancuerna (superserie #4)", "4x10 c/pierna"], ["Fuerza", "Zancada inversa con mancuernas (superserie #3)", "4x10 c/pierna"], ["Fuerza", "Elevación de cadera con banda a una pierna", "4x10 c/pierna"], ["Fuerza", "Curl femoral de pie con banda", "4x10 c/pierna"], ["Fuerza", "Pull-through con banda", "4x12"], ["Abdominales", "Dead bug con banda (resistencia)", "4x12 c/lado"], ["Abdominales", "Pallof press con mancuerna en press", "4x12 c/lado"], ["Cardio", "Circuito 4 rondas: 10 swings + 10 step-ups + 15 marcha lateral con banda", "RPE 7-8"]], "Upper B": [["Ancla", "Press inclinado con mancuernas", "5x8"], ["Ancla", "Dominadas asistidas o jalón", "5x8"], ["Fuerza", "Push press con barra (superserie #4)", "4x6"], ["Fuerza", "Remo Meadows improvisado en banco (superserie #3)", "4x10 c/lado"], ["Fuerza", "Elevaciones laterales inclinado (dropset)", "4x15"], ["Fuerza", "Face pull con banda (tempo lento)", "4x15"], ["Fuerza", "Curl 21 con mancuernas", "4x12"], ["Abdominales", "Rueda abdominal de pie asistida", "4x10"], ["Abdominales", "Giro ruso con salto de pies (avanzado)", "4x15 c/lado"], ["Cardio", "Tabata 4min: burpees/mountain climbers (20/10 x8)", "RPE 7-8"]]}}, "fase5": {"nombre": "Fase 5", "rango": "Semanas 17-20 (RIR 1, mantener cargas F4 · deload semana 20)", "semanas": [17, 18, 19, 20], "deload": [20], "dias": {"Lower A": [["Ancla", "Sentadilla con barra (mantener carga fase 4)", "5x6"], ["Ancla", "Peso muerto rumano con barra", "3x8"], ["Fuerza", "Zancada lateral con mancuernas", "3x10 c/pierna"], ["Fuerza", "Pistol squat asistido (banco)", "3x8 c/pierna"], ["Fuerza", "Elevación de cadera a una pierna con mancuerna", "3x10 c/pierna"], ["Fuerza", "Peso muerto a una pierna con mancuerna (RDL unilateral)", "3x10 c/pierna"], ["Fuerza", "Elevación de talones en escalón (rango completo)", "3x15"], ["Abdominales", "Plancha frontal con marcha (marching plank)", "3x45seg"], ["Abdominales", "Toes to bar asistido / elevación de piernas rápida", "3x15"], ["Cardio", "Tabata 4min: sentadilla con salto/swings alternados (20/10 x8)", "RPE 8-9"]], "Upper A": [["Ancla", "Press banca con barra", "5x6"], ["Ancla", "Remo con barra", "4x8"], ["Fuerza", "Press militar sentado con mancuernas", "3x8"], ["Fuerza", "Remo unilateral con mancuerna en banco inclinado", "3x10 c/lado"], ["Fuerza", "Aperturas declinadas con mancuernas", "3x12"], ["Fuerza", "Curl concentrado con mancuerna", "3x10"], ["Fuerza", "Fondos en banco (tríceps)", "3x10"], ["Abdominales", "Plancha lateral con toque al frente", "3x30seg c/lado"], ["Abdominales", "V-ups", "3x15"], ["Cardio", "EMOM 8min: 10 burpees a ritmo máximo", "RPE 8-9"]], "Lower B": [["Ancla", "Peso muerto convencional", "5x5"], ["Ancla", "Hip thrust con barra (mantener carga fase 4)", "3x10"], ["Fuerza", "Puente de glúteo a una pierna", "3x10 c/pierna"], ["Fuerza", "Sentadilla búlgara con pie elevado", "3x8 c/pierna"], ["Fuerza", "Hip thrust con banda (resistencia añadida)", "3x10"], ["Fuerza", "Peso muerto rumano con mancuernas (bilateral)", "3x10"], ["Fuerza", "Extensión de cadera en cuadrupedia con mancuerna", "3x12 c/lado"], ["Abdominales", "Bird dog con peso en tobillo", "3x12 c/lado"], ["Abdominales", "Woodchopper con banda", "3x15 c/lado"], ["Cardio", "AMRAP 8min: 10 step-ups + 10 swings a ritmo máximo controlado", "RPE 8-9"]], "Upper B": [["Ancla", "Press inclinado con mancuernas", "5x6"], ["Ancla", "Dominadas asistidas o jalón", "4x8"], ["Fuerza", "Press militar unilateral con mancuerna", "3x8 c/lado"], ["Fuerza", "Remo con mancuerna a un brazo en banco inclinado", "3x10 c/lado"], ["Fuerza", "Elevación lateral en banda unilateral", "3x15 c/lado"], ["Fuerza", "Y-raise con banda", "3x15"], ["Fuerza", "Curl araña con mancuerna", "3x12"], ["Abdominales", "Ab wheel avanzado (o plancha con deslizamiento extendido)", "3x10"], ["Abdominales", "Woodchopper con banda (ritmo rápido controlado)", "3x15 c/lado"], ["Cardio", "Tabata 4min: mountain climbers/burpees a ritmo máximo (20/10 x8)", "RPE 8-9"]]}}};
+
+const CAT_INFO = {
+  Ancla:      { label:"ANCLA",   cls:"badge-ancla" },
+  Fuerza:     { label:"FUERZA",  cls:"badge-fuerza" },
+  Abdominales:{ label:"ABDOMEN", cls:"badge-abdominales" },
+  Cardio:     { label:"CARDIO",  cls:"badge-cardio" },
+};
+const CATEGORIAS = ["Ancla","Fuerza","Abdominales","Cardio"];
+
+const PROGRAMS_KEY = "plan5fases-programas-v1";
+const PROGRESO_KEY = "plan5fases-progreso-v2";
+
+// ---------------------------------------------------------------------------
+// ESTADO
+// ---------------------------------------------------------------------------
+let state = {
+  programs: {},
+  programKey: null,
+  phaseKey: null,
+  day: null,
+  week: null,
+  progreso: {},
+  editMode: false,
+  editScope: "fase",   // "fase" | "semana" — alcance de la edicion rapida
+  menuOpen: false,
+  saveState: "idle",
+  view: "tracker",       // "tracker" | "builder"
+  builderDraft: null,
+  builderOriginalKey: null,
+};
+
+// ---------------------------------------------------------------------------
+// PERSISTENCIA
+// ---------------------------------------------------------------------------
+function loadPrograms() {
+  try {
+    const raw = localStorage.getItem(PROGRAMS_KEY);
+    if (raw) return JSON.parse(raw);
+  } catch (e) {}
+  const seeded = { ciclo1: { nombre: "Ciclo 1 — Recomposición (20 sem)", fases: SEED_FASES } };
+  try { localStorage.setItem(PROGRAMS_KEY, JSON.stringify(seeded)); } catch (e) {}
+  return seeded;
+}
+let savePgTimer = null;
+function savePrograms() {
+  clearTimeout(savePgTimer);
+  savePgTimer = setTimeout(() => {
+    try { localStorage.setItem(PROGRAMS_KEY, JSON.stringify(state.programs)); } catch (e) {}
+  }, 350);
+}
+function loadProgreso() {
+  try {
+    const raw = localStorage.getItem(PROGRESO_KEY);
+    return raw ? JSON.parse(raw) : {};
+  } catch (e) { return {}; }
+}
+let saveProgTimer = null;
+function scheduleSaveProgreso() {
+  state.saveState = "saving";
+  renderFooterOnly();
+  clearTimeout(saveProgTimer);
+  saveProgTimer = setTimeout(() => {
+    try {
+      localStorage.setItem(PROGRESO_KEY, JSON.stringify(state.progreso));
+      state.saveState = "saved";
+    } catch (e) { state.saveState = "error"; }
+    renderFooterOnly();
+  }, 350);
+}
+
+// ---------------------------------------------------------------------------
+// HELPERS DE PROGRAMA ACTIVO
+// ---------------------------------------------------------------------------
+function activeProgram() { return state.programs[state.programKey]; }
+function faseKeys() { return Object.keys(activeProgram().fases); }
+function currentFase() { return activeProgram().fases[state.phaseKey]; }
+function dayKeysOf(fase) { return Object.keys(fase.dias); }
+
+function ensureValidSelection() {
+  const prog = activeProgram();
+  const fks = Object.keys(prog.fases);
+  if (!fks.includes(state.phaseKey)) state.phaseKey = fks[0];
+  const fase = prog.fases[state.phaseKey];
+  const dks = Object.keys(fase.dias);
+  if (!dks.includes(state.day)) state.day = dks[0];
+  if (!fase.semanas.includes(state.week)) state.week = fase.semanas[0];
+}
+
+function getExercise(day, week, idx) {
+  const fase = currentFase();
+  const ov = fase.overridesSemana && fase.overridesSemana[week] && fase.overridesSemana[week][day];
+  const arr = (ov && ov[idx]) ? ov[idx] : fase.dias[day][idx];
+  return { cat: arr[0], nombre: arr[1], series: arr[2] };
+}
+function hasWeekOverride(day, week) {
+  const fase = currentFase();
+  return !!(fase.overridesSemana && fase.overridesSemana[week] && fase.overridesSemana[week][day]);
+}
+function updateExercise(idx, patch) {
+  const fase = currentFase();
+  const { day, week } = state;
+  if (state.editScope === "semana") {
+    fase.overridesSemana = fase.overridesSemana || {};
+    fase.overridesSemana[week] = fase.overridesSemana[week] || {};
+    if (!fase.overridesSemana[week][day]) {
+      // clonamos la lista efectiva actual para esta semana puntual
+      fase.overridesSemana[week][day] = fase.dias[day].map(arr => arr.slice());
+    }
+    const arr = fase.overridesSemana[week][day][idx];
+    if (patch.nombre !== undefined) arr[1] = patch.nombre;
+    if (patch.series !== undefined) arr[2] = patch.series;
+  } else {
+    const arr = fase.dias[day][idx];
+    if (patch.nombre !== undefined) arr[1] = patch.nombre;
+    if (patch.series !== undefined) arr[2] = patch.series;
+  }
+  savePrograms();
+}
+function removeWeekOverride() {
+  const fase = currentFase();
+  const { day, week } = state;
+  if (fase.overridesSemana && fase.overridesSemana[week]) {
+    delete fase.overridesSemana[week][day];
+    if (Object.keys(fase.overridesSemana[week]).length === 0) delete fase.overridesSemana[week];
+  }
+  savePrograms();
+  render();
+}
+
+function getSlot(day, week, idx) {
+  const p = state.progreso;
+  return (p[state.programKey] && p[state.programKey][state.phaseKey] &&
+          p[state.programKey][state.phaseKey][day] && p[state.programKey][state.phaseKey][day][week] &&
+          p[state.programKey][state.phaseKey][day][week][idx]) || { peso:"", obs:"", done:false };
+}
+function updateSlot(idx, patch) {
+  const { programKey, phaseKey, day, week } = state;
+  const p = state.progreso;
+  p[programKey] = p[programKey] || {};
+  p[programKey][phaseKey] = p[programKey][phaseKey] || {};
+  p[programKey][phaseKey][day] = p[programKey][phaseKey][day] || {};
+  p[programKey][phaseKey][day][week] = p[programKey][phaseKey][day][week] || {};
+  const current = p[programKey][phaseKey][day][week][idx] || { peso:"", obs:"", done:false };
+  p[programKey][phaseKey][day][week][idx] = Object.assign({}, current, patch);
+  scheduleSaveProgreso();
+}
+
+// ---------------------------------------------------------------------------
+// CALCULOS DE CUMPLIMIENTO
+// ---------------------------------------------------------------------------
+function calcDayPct(day, week) {
+  const fase = currentFase();
+  const ejercicios = fase.dias[day];
+  let done = 0;
+  ejercicios.forEach((_, idx) => { if (getSlot(day, week, idx).done) done++; });
+  return Math.round((done / ejercicios.length) * 100);
+}
+function calcFasePct(faseKey) {
+  const fase = activeProgram().fases[faseKey];
+  let done = 0, total = 0;
+  dayKeysOf(fase).forEach(d => {
+    fase.semanas.forEach(s => {
+      fase.dias[d].forEach((_, idx) => {
+        total++;
+        const slot = (state.progreso[state.programKey] && state.progreso[state.programKey][faseKey] &&
+                      state.progreso[state.programKey][faseKey][d] && state.progreso[state.programKey][faseKey][d][s] &&
+                      state.progreso[state.programKey][faseKey][d][s][idx]) || { done:false };
+        if (slot.done) done++;
+      });
+    });
+  });
+  return total ? Math.round((done/total)*100) : 0;
+}
+function calcMacroPct() {
+  let done = 0, total = 0;
+  Object.keys(activeProgram().fases).forEach(fk => {
+    const fase = activeProgram().fases[fk];
+    dayKeysOf(fase).forEach(d => {
+      fase.semanas.forEach(s => {
+        fase.dias[d].forEach((_, idx) => {
+          total++;
+          const slot = (state.progreso[state.programKey] && state.progreso[state.programKey][fk] &&
+                        state.progreso[state.programKey][fk][d] && state.progreso[state.programKey][fk][d][s] &&
+                        state.progreso[state.programKey][fk][d][s][idx]) || { done:false };
+          if (slot.done) done++;
+        });
+      });
+    });
+  });
+  return total ? Math.round((done/total)*100) : 0;
+}
+
+// ---------------------------------------------------------------------------
+// GAUGE SVG
+// ---------------------------------------------------------------------------
+function gaugeSVG(percent, label) {
+  const pct = Math.max(0, Math.min(100, percent));
+  // Barrido correcto: 0% = izquierda (180°), 50% = arriba (270°/-90°), 100% = derecha (360°/0°)
+  const angle = 180 + (pct/100)*180;
+  const color = pct >= 80 ? "#4FA88C" : pct >= 40 ? "#E8A33D" : "#D64545";
+  const rad = d => d * Math.PI / 180;
+  const cx=60, cy=54, r=44;
+  const arcStart = { x: cx + r*Math.cos(rad(180)), y: cy + r*Math.sin(rad(180)) };
+  const arcEnd   = { x: cx + r*Math.cos(rad(360)), y: cy + r*Math.sin(rad(360)) };
+  const progEnd  = { x: cx + r*Math.cos(rad(angle)), y: cy + r*Math.sin(rad(angle)) };
+  const needleLen = r - 12;
+  const nx = cx + needleLen*Math.cos(rad(angle));
+  const ny = cy + needleLen*Math.sin(rad(angle));
+  const ticks = [0,25,50,75,100].map(t => {
+    const a = 180 + (t/100)*180;
+    return {
+      x1: cx + (r-6)*Math.cos(rad(a)), y1: cy + (r-6)*Math.sin(rad(a)),
+      x2: cx + r*Math.cos(rad(a)),     y2: cy + r*Math.sin(rad(a)),
+    };
+  });
+  return `
+    <div class="gauge-wrap">
+      <svg width="120" height="72" viewBox="0 0 120 66">
+        <path d="M ${arcStart.x} ${arcStart.y} A ${r} ${r} 0 0 1 ${arcEnd.x} ${arcEnd.y}" fill="none" stroke="#2A2E33" stroke-width="10" stroke-linecap="round"/>
+        <path d="M ${arcStart.x} ${arcStart.y} A ${r} ${r} 0 0 1 ${progEnd.x} ${progEnd.y}" fill="none" stroke="${color}" stroke-width="10" stroke-linecap="round"/>
+        ${ticks.map(t => `<line x1="${t.x1}" y1="${t.y1}" x2="${t.x2}" y2="${t.y2}" stroke="#5A5F66" stroke-width="2"/>`).join("")}
+        <line x1="${cx}" y1="${cy}" x2="${nx}" y2="${ny}" stroke="#E8E6E1" stroke-width="2.5" stroke-linecap="round"/>
+        <circle cx="${cx}" cy="${cy}" r="4" fill="#E8E6E1"/>
+        <text x="${cx}" y="${cy-16}" text-anchor="middle" font-family="IBM Plex Mono" font-size="15" font-weight="600" fill="${color}">${pct}%</text>
+      </svg>
+      <div class="gauge-label">${label}</div>
+    </div>`;
+}
+
+function escapeAttr(str) {
+  return String(str == null ? "" : str).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+function weekRange(a, b) {
+  const inicio = Number(a) || 1;
+  const fin = Math.max(Number(b) || inicio, inicio);
+  const out = [];
+  for (let w = inicio; w <= fin; w++) out.push(w);
+  return out;
+}
+
+// ---------------------------------------------------------------------------
+// RENDER PRINCIPAL
+// ---------------------------------------------------------------------------
+function render() {
+  if (state.view === "builder") {
+    document.getElementById("root").innerHTML = renderBuilderHTML();
+    attachBuilderListeners();
+    return;
+  }
+
+  ensureValidSelection();
+  const { phaseKey, day, week } = state;
+  const prog = activeProgram();
+  const fase = currentFase();
+  const ejercicios = fase.dias[day];
+  const isDeload = fase.deload.includes(week);
+  const macroPct = calcMacroPct();
+  const dayPct = calcDayPct(day, week);
+  const fasePct = calcFasePct(phaseKey);
+  const progKeys = Object.keys(state.programs);
+
+  const html = `
+    <div class="sticky-top">
+      <header class="header">
+        <div>
+          <div class="eyebrow">Orden de trabajo — recomposición corporal</div>
+          <h1 class="title">${escapeAttr(prog.nombre)}</h1>
+        </div>
+        <div class="header-right">
+          <div class="macro-stat">
+            <div class="macro-num">${macroPct}%</div>
+            <div class="macro-label">avance total del ciclo</div>
+          </div>
+          <div class="menu-wrap">
+            <button class="menu-btn" data-action="menu-toggle">⋮</button>
+            <div class="menu-dropdown ${state.menuOpen ? "open" : ""}">
+              <button class="menu-item" data-action="new-cycle">Nuevo ciclo</button>
+              <button class="menu-item" data-action="edit-structure">Editar estructura de este ciclo</button>
+              <button class="menu-item" data-action="toggle-edit">${state.editMode ? "✓ Salir de edición rápida" : "Editar ejercicios (rápido)"}</button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="program-row">
+        <select class="program-select" data-action="program-select">
+          ${progKeys.map(k => `<option value="${k}" ${k===state.programKey?"selected":""}>${escapeAttr(state.programs[k].nombre)}</option>`).join("")}
+        </select>
+        ${progKeys.length > 1 ? `<button class="btn-ghost btn-sm btn-danger" data-action="program-delete">Eliminar ciclo</button>` : ""}
+      </div>
+
+      <nav class="tabs phase-tabs">
+        ${faseKeys().map(fk => `<button class="tab ${fk===phaseKey?"active":""}" data-action="phase" data-value="${fk}">${escapeAttr(prog.fases[fk].nombre)}</button>`).join("")}
+      </nav>
+      <div class="fase-rango">${escapeAttr(fase.rango)}</div>
+
+      <nav class="tabs day-tabs">
+        ${dayKeysOf(fase).map(d => `<button class="tab ${d===day?"active":""}" data-action="day" data-value="${escapeAttr(d)}">${escapeAttr(d)}</button>`).join("")}
+      </nav>
+
+      <div class="week-row">
+        ${fase.semanas.map(s => `<button class="week-chip ${s===week?"active":""} ${fase.deload.includes(s)?"deload":""}" data-action="week" data-value="${s}">Sem ${s}</button>`).join("")}
+      </div>
+
+      ${isDeload ? `<div class="deload-banner">⚠ Semana de descarga — reducir series 40/50%, mantener peso o -10%.</div>` : ""}
+
+      ${state.editMode ? `
+      <div class="edit-banner">
+        ✎ Edición rápida activa en <b>${escapeAttr(day)}</b> · ${escapeAttr(fase.nombre)}. Para agregar o quitar fases/días/ejercicios usá "Editar estructura" en el menú.
+        <div class="edit-scope-row">
+          <span class="deload-label">Aplicar a:</span>
+          <button class="week-chip ${state.editScope==='fase'?'active':''}" data-action="edit-scope" data-value="fase">Toda la fase</button>
+          <button class="week-chip ${state.editScope==='semana'?'active':''}" data-action="edit-scope" data-value="semana">Solo Sem ${week}</button>
+          ${state.editScope==='semana' ? `<button class="btn-ghost btn-sm btn-danger" data-action="remove-week-override">Quitar personalización de Sem ${week}</button>` : ""}
+        </div>
+      </div>` : (hasWeekOverride(day, week) ? `<div class="week-override-banner">✎ Esta semana (Sem ${week}) tiene ejercicios personalizados, distintos al resto de la fase.</div>` : "")}
+
+      <div class="gauges-strip">
+        ${gaugeSVG(dayPct, day + " · Sem " + week)}
+        ${gaugeSVG(fasePct, fase.nombre + " completa")}
+      </div>
+
+      <div class="row row-head table-edge-top ${state.editMode ? "row-edit" : ""}">
+        <span class="col-n">N°</span><span class="col-cat">Cat.</span><span class="col-ex">Ejercicio</span>
+        <span class="col-series">Series</span><span class="col-obs">Obs.</span><span class="col-peso">Peso</span><span class="col-check">✓</span>
+      </div>
+    </div>
+
+    <div class="table-body">
+      ${ejercicios.map((ex, idx) => {
+        const exData = getExercise(day, week, idx);
+        const slot = getSlot(day, week, idx);
+        const info = CAT_INFO[exData.cat] || CAT_INFO.Fuerza;
+        const isLast = idx === ejercicios.length - 1;
+        if (state.editMode) {
+          return `
+          <div class="row row-edit ${isLast ? "table-edge-bottom" : ""}">
+            <span class="col-n">${idx+1}</span>
+            <span class="col-cat"><span class="badge ${info.cls}">${info.label}</span></span>
+            <span class="col-ex"><input class="edit-input" type="text" value="${escapeAttr(exData.nombre)}" data-action="edit-nombre" data-idx="${idx}"></span>
+            <span class="col-series"><input class="edit-input edit-input-series" type="text" value="${escapeAttr(exData.series)}" data-action="edit-series" data-idx="${idx}"></span>
+            <span class="col-obs"></span>
+            <span class="col-peso"></span>
+            <span class="col-check"></span>
+          </div>`;
+        }
+        return `
+        <div class="row ${slot.done?"row-done":""} ${isLast ? "table-edge-bottom" : ""}">
+          <span class="col-n">${idx+1}</span>
+          <span class="col-cat"><span class="badge ${info.cls}">${info.label}</span></span>
+          <span class="col-ex">${escapeAttr(exData.nombre)}</span>
+          <span class="col-series">${escapeAttr(exData.series)}</span>
+          <span class="col-obs"><input class="obs-input" type="text" placeholder="—" value="${escapeAttr(slot.obs)}" data-action="obs" data-idx="${idx}"></span>
+          <span class="col-peso"><input class="peso-input" type="text" inputmode="decimal" placeholder="kg" value="${escapeAttr(slot.peso)}" data-action="peso" data-idx="${idx}"></span>
+          <span class="col-check"><button class="check-btn ${slot.done?"done":""}" data-action="check" data-idx="${idx}">${slot.done?"✓":""}</button></span>
+        </div>`;
+      }).join("")}
+    </div>
+
+    <div class="footer">
+      <span class="save-indicator" id="save-indicator">${saveLabel()}</span>
+      <div class="backup-actions">
+        <button class="btn-ghost" data-action="export">Descargar respaldo</button>
+        <button class="btn-ghost" data-action="share">Compartir a Drive</button>
+        <button class="btn-ghost" data-action="import">Restaurar respaldo</button>
+        <button class="btn-ghost btn-danger" data-action="reset">Reiniciar progreso</button>
+      </div>
+    </div>
+
+    <div class="install-hint">
+      <b>Acceso directo en el celular:</b> subí esta carpeta a un hosting gratis y abrí el link resultante en Chrome/Safari → "Agregar a pantalla de inicio".<br><br>
+      <b>Respaldo:</b> "Descargar respaldo" guarda el archivo en Descargas (siempre funciona). "Compartir a Drive" abre el menú nativo de compartir si tu navegador lo soporta. El respaldo incluye todos tus ciclos y tu progreso.
+    </div>
+
+    <input type="file" id="import-input" accept="application/json" style="display:none">
+  `;
+  document.getElementById("root").innerHTML = html;
+  attachListeners();
+}
+
+function saveLabel() {
+  if (state.saveState === "saving") return "Guardando…";
+  if (state.saveState === "saved") return "Guardado en este dispositivo ✓";
+  if (state.saveState === "error") return "Error al guardar";
+  return "Sin cambios";
+}
+function renderFooterOnly() {
+  const el = document.getElementById("save-indicator");
+  if (el) el.textContent = saveLabel();
+}
+
+// ---------------------------------------------------------------------------
+// LISTENERS — VISTA TRACKER
+// ---------------------------------------------------------------------------
+function attachListeners() {
+  document.querySelectorAll('[data-action="phase"]').forEach(el => {
+    el.addEventListener("click", () => {
+      state.phaseKey = el.dataset.value;
+      const fase = currentFase();
+      state.day = dayKeysOf(fase)[0];
+      state.week = fase.semanas[0];
+      state.editScope = "fase";
+      render();
+    });
+  });
+  document.querySelectorAll('[data-action="day"]').forEach(el => {
+    el.addEventListener("click", () => { state.day = el.dataset.value; state.editScope = "fase"; render(); });
+  });
+  document.querySelectorAll('[data-action="week"]').forEach(el => {
+    el.addEventListener("click", () => { state.week = Number(el.dataset.value); render(); });
+  });
+  document.querySelectorAll('[data-action="check"]').forEach(el => {
+    el.addEventListener("click", () => {
+      const idx = Number(el.dataset.idx);
+      const cur = getSlot(state.day, state.week, idx);
+      updateSlot(idx, { done: !cur.done });
+      render();
+    });
+  });
+  document.querySelectorAll('[data-action="peso"]').forEach(el => {
+    el.addEventListener("input", () => {
+      const idx = Number(el.dataset.idx);
+      updateSlot(idx, { peso: el.value });
+    });
+  });
+  document.querySelectorAll('[data-action="obs"]').forEach(el => {
+    el.addEventListener("input", () => {
+      const idx = Number(el.dataset.idx);
+      updateSlot(idx, { obs: el.value });
+    });
+  });
+  document.querySelectorAll('[data-action="edit-nombre"]').forEach(el => {
+    el.addEventListener("input", () => updateExercise(Number(el.dataset.idx), { nombre: el.value }));
+  });
+  document.querySelectorAll('[data-action="edit-series"]').forEach(el => {
+    el.addEventListener("input", () => updateExercise(Number(el.dataset.idx), { series: el.value }));
+  });
+  document.querySelectorAll('[data-action="edit-scope"]').forEach(el => {
+    el.addEventListener("click", () => { state.editScope = el.dataset.value; render(); });
+  });
+  const removeOverrideBtn = document.querySelector('[data-action="remove-week-override"]');
+  if (removeOverrideBtn) removeOverrideBtn.addEventListener("click", () => {
+    if (!hasWeekOverride(state.day, state.week)) {
+      showToast(`La Semana ${state.week} no tiene personalización propia todavía.`);
+      return;
+    }
+    if (!window.confirm(`¿Quitar la personalización de la Semana ${state.week}? Vuelve a usar los ejercicios de toda la fase.`)) return;
+    removeWeekOverride();
+  });
+
+  const menuBtn = document.querySelector('[data-action="menu-toggle"]');
+  if (menuBtn) menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    state.menuOpen = !state.menuOpen;
+    render();
+  });
+  const toggleEditBtn = document.querySelector('[data-action="toggle-edit"]');
+  if (toggleEditBtn) toggleEditBtn.addEventListener("click", () => {
+    state.editMode = !state.editMode;
+    state.editScope = "fase";
+    state.menuOpen = false;
+    render();
+  });
+  const newCycleBtn = document.querySelector('[data-action="new-cycle"]');
+  if (newCycleBtn) newCycleBtn.addEventListener("click", () => openBuilder(null));
+  const editStructBtn = document.querySelector('[data-action="edit-structure"]');
+  if (editStructBtn) editStructBtn.addEventListener("click", () => openBuilder(state.programKey));
+
+  const programSelect = document.querySelector('[data-action="program-select"]');
+  if (programSelect) programSelect.addEventListener("change", () => {
+    state.programKey = programSelect.value;
+    const prog = activeProgram();
+    const fk = Object.keys(prog.fases)[0];
+    state.phaseKey = fk;
+    state.day = dayKeysOf(prog.fases[fk])[0];
+    state.week = prog.fases[fk].semanas[0];
+    render();
+  });
+  const programDelete = document.querySelector('[data-action="program-delete"]');
+  if (programDelete) programDelete.addEventListener("click", () => {
+    const keys = Object.keys(state.programs);
+    if (keys.length <= 1) return;
+    if (!window.confirm(`¿Eliminar el ciclo "${activeProgram().nombre}"? Se borra también su progreso guardado. Esta acción no se puede deshacer.`)) return;
+    const delKey = state.programKey;
+    delete state.programs[delKey];
+    if (state.progreso[delKey]) delete state.progreso[delKey];
+    state.programKey = Object.keys(state.programs)[0];
+    savePrograms();
+    scheduleSaveProgreso();
+    render();
+  });
+
+  const exportBtn = document.querySelector('[data-action="export"]');
+  if (exportBtn) exportBtn.addEventListener("click", exportBackup);
+  const shareBtn = document.querySelector('[data-action="share"]');
+  if (shareBtn) shareBtn.addEventListener("click", shareBackup);
+  const importBtn = document.querySelector('[data-action="import"]');
+  const importInput = document.getElementById("import-input");
+  if (importBtn) importBtn.addEventListener("click", () => importInput.click());
+  if (importInput) importInput.addEventListener("change", importBackup);
+  const resetBtn = document.querySelector('[data-action="reset"]');
+  if (resetBtn) resetBtn.addEventListener("click", resetTodo);
+
+  document.addEventListener("click", (e) => {
+    if (state.menuOpen && !e.target.closest(".menu-wrap")) {
+      state.menuOpen = false;
+      render();
+    }
+  }, { once: true });
+}
+
+// ---------------------------------------------------------------------------
+// CONSTRUCTOR DE CICLOS ("Nuevo ciclo" / "Editar estructura")
+// ---------------------------------------------------------------------------
+function openBuilder(existingKey) {
+  if (existingKey) {
+    const prog = state.programs[existingKey];
+    const fasesArr = Object.keys(prog.fases).map(fk => {
+      const f = prog.fases[fk];
+      return {
+        nombre: f.nombre,
+        rango: f.rango,
+        semanaInicio: f.semanas[0],
+        semanaFin: f.semanas[f.semanas.length-1],
+        deload: [...f.deload],
+        dias: Object.keys(f.dias).map(dn => ({
+          nombre: dn,
+          ejercicios: f.dias[dn].map(arr => ({ cat: arr[0], nombre: arr[1], series: arr[2] })),
+        })),
+      };
+    });
+    state.builderDraft = { nombre: prog.nombre, fases: fasesArr };
+    state.builderOriginalKey = existingKey;
+  } else {
+    state.builderDraft = { nombre: "Nuevo ciclo", fases: [] };
+    state.builderOriginalKey = null;
+  }
+  state.view = "builder";
+  state.menuOpen = false;
+  render();
+}
+
+function renderBuilderHTML() {
+  const draft = state.builderDraft;
+  return `
+    <div class="builder">
+      <div class="builder-topbar">
+        <button class="btn-ghost" data-action="builder-cancel">‹ Cancelar</button>
+        <input class="edit-input builder-name" type="text" value="${escapeAttr(draft.nombre)}" data-action="builder-nombre" placeholder="Nombre del ciclo">
+        <button class="btn-save" data-action="builder-save">Guardar ciclo</button>
+      </div>
+
+      ${draft.fases.map((f, fi) => `
+        <div class="builder-fase">
+          <div class="builder-fase-head">
+            <input class="edit-input" type="text" value="${escapeAttr(f.nombre)}" data-action="b-fase-nombre" data-fi="${fi}" placeholder="Nombre de fase">
+            <button class="btn-ghost btn-danger btn-sm" data-action="b-fase-del" data-fi="${fi}">Eliminar fase</button>
+          </div>
+          <input class="edit-input builder-rango" type="text" value="${escapeAttr(f.rango)}" data-action="b-fase-rango" data-fi="${fi}" placeholder="Descripción (ej: RIR 2-3, volumen moderado)">
+          <div class="builder-semanas-row">
+            <label>Semana desde</label>
+            <input class="week-num-input" type="number" min="1" value="${f.semanaInicio}" data-action="b-fase-inicio" data-fi="${fi}">
+            <label>hasta</label>
+            <input class="week-num-input" type="number" min="1" value="${f.semanaFin}" data-action="b-fase-fin" data-fi="${fi}">
+          </div>
+          <div class="builder-deload-row">
+            <span class="deload-label">Deload:</span>
+            ${weekRange(f.semanaInicio, f.semanaFin).map(w => `
+              <button class="week-chip ${f.deload.includes(w) ? "deload active" : ""}" data-action="b-toggle-deload" data-fi="${fi}" data-week="${w}">Sem ${w}</button>
+            `).join("")}
+          </div>
+
+          ${f.dias.map((d, di) => `
+            <div class="builder-dia">
+              <div class="builder-dia-head">
+                <input class="edit-input" type="text" value="${escapeAttr(d.nombre)}" data-action="b-dia-nombre" data-fi="${fi}" data-di="${di}" placeholder="Nombre del día">
+                <button class="btn-ghost btn-danger btn-sm" data-action="b-dia-del" data-fi="${fi}" data-di="${di}">Eliminar día</button>
+              </div>
+              <div class="builder-ex-table">
+                ${d.ejercicios.map((e, ei) => `
+                  <div class="builder-ex-row">
+                    <select class="ex-cat-select" data-action="b-ex-cat" data-fi="${fi}" data-di="${di}" data-ei="${ei}">
+                      ${CATEGORIAS.map(c => `<option value="${c}" ${e.cat===c?"selected":""}>${c}</option>`).join("")}
+                    </select>
+                    <input class="edit-input" type="text" value="${escapeAttr(e.nombre)}" placeholder="Ejercicio" data-action="b-ex-nombre" data-fi="${fi}" data-di="${di}" data-ei="${ei}">
+                    <input class="edit-input edit-input-series" type="text" value="${escapeAttr(e.series)}" placeholder="Series" data-action="b-ex-series" data-fi="${fi}" data-di="${di}" data-ei="${ei}">
+                    <button class="reset-ex-btn" data-action="b-ex-del" data-fi="${fi}" data-di="${di}" data-ei="${ei}" title="Quitar">✕</button>
+                  </div>
+                `).join("")}
+              </div>
+              <button class="btn-ghost btn-sm" data-action="b-ex-add" data-fi="${fi}" data-di="${di}">+ Agregar ejercicio</button>
+            </div>
+          `).join("")}
+          <button class="btn-ghost btn-sm" data-action="b-dia-add" data-fi="${fi}">+ Agregar día</button>
+        </div>
+      `).join("")}
+
+      <button class="btn-add-fase" data-action="b-fase-add">+ Agregar fase</button>
+    </div>
+  `;
+}
+
+function attachBuilderListeners() {
+  const draft = state.builderDraft;
+
+  document.querySelector('[data-action="builder-cancel"]').addEventListener("click", () => {
+    if (!window.confirm("¿Descartar los cambios de este ciclo?")) return;
+    state.view = "tracker";
+    state.builderDraft = null;
+    render();
+  });
+  document.querySelector('[data-action="builder-save"]').addEventListener("click", commitBuilder);
+  document.querySelector('[data-action="builder-nombre"]').addEventListener("input", (e) => {
+    draft.nombre = e.target.value;
+  });
+  document.querySelector('[data-action="b-fase-add"]').addEventListener("click", () => {
+    const last = draft.fases[draft.fases.length-1];
+    const inicio = last ? Number(last.semanaFin)+1 : 1;
+    draft.fases.push({ nombre: "Fase " + (draft.fases.length+1), rango: "", semanaInicio: inicio, semanaFin: inicio+3, deload: [], dias: [] });
+    render();
+  });
+
+  document.querySelectorAll('[data-action="b-fase-nombre"]').forEach(el => {
+    el.addEventListener("input", () => { draft.fases[Number(el.dataset.fi)].nombre = el.value; });
+  });
+  document.querySelectorAll('[data-action="b-fase-rango"]').forEach(el => {
+    el.addEventListener("input", () => { draft.fases[Number(el.dataset.fi)].rango = el.value; });
+  });
+  document.querySelectorAll('[data-action="b-fase-inicio"]').forEach(el => {
+    el.addEventListener("change", () => { draft.fases[Number(el.dataset.fi)].semanaInicio = Number(el.value) || 1; render(); });
+  });
+  document.querySelectorAll('[data-action="b-fase-fin"]').forEach(el => {
+    el.addEventListener("change", () => { draft.fases[Number(el.dataset.fi)].semanaFin = Number(el.value) || 1; render(); });
+  });
+  document.querySelectorAll('[data-action="b-fase-del"]').forEach(el => {
+    el.addEventListener("click", () => {
+      if (!window.confirm("¿Eliminar esta fase y todo lo que tiene adentro?")) return;
+      draft.fases.splice(Number(el.dataset.fi), 1);
+      render();
+    });
+  });
+  document.querySelectorAll('[data-action="b-toggle-deload"]').forEach(el => {
+    el.addEventListener("click", () => {
+      const f = draft.fases[Number(el.dataset.fi)];
+      const w = Number(el.dataset.week);
+      const i = f.deload.indexOf(w);
+      if (i >= 0) f.deload.splice(i,1); else f.deload.push(w);
+      render();
+    });
+  });
+
+  document.querySelectorAll('[data-action="b-dia-add"]').forEach(el => {
+    el.addEventListener("click", () => {
+      const f = draft.fases[Number(el.dataset.fi)];
+      f.dias.push({ nombre: "Día " + (f.dias.length+1), ejercicios: [] });
+      render();
+    });
+  });
+  document.querySelectorAll('[data-action="b-dia-nombre"]').forEach(el => {
+    el.addEventListener("input", () => {
+      draft.fases[Number(el.dataset.fi)].dias[Number(el.dataset.di)].nombre = el.value;
+    });
+  });
+  document.querySelectorAll('[data-action="b-dia-del"]').forEach(el => {
+    el.addEventListener("click", () => {
+      if (!window.confirm("¿Eliminar este día y sus ejercicios?")) return;
+      draft.fases[Number(el.dataset.fi)].dias.splice(Number(el.dataset.di), 1);
+      render();
+    });
+  });
+
+  document.querySelectorAll('[data-action="b-ex-add"]').forEach(el => {
+    el.addEventListener("click", () => {
+      const d = draft.fases[Number(el.dataset.fi)].dias[Number(el.dataset.di)];
+      d.ejercicios.push({ cat: "Fuerza", nombre: "", series: "" });
+      render();
+    });
+  });
+  document.querySelectorAll('[data-action="b-ex-nombre"]').forEach(el => {
+    el.addEventListener("input", () => {
+      draft.fases[Number(el.dataset.fi)].dias[Number(el.dataset.di)].ejercicios[Number(el.dataset.ei)].nombre = el.value;
+    });
+  });
+  document.querySelectorAll('[data-action="b-ex-series"]').forEach(el => {
+    el.addEventListener("input", () => {
+      draft.fases[Number(el.dataset.fi)].dias[Number(el.dataset.di)].ejercicios[Number(el.dataset.ei)].series = el.value;
+    });
+  });
+  document.querySelectorAll('[data-action="b-ex-cat"]').forEach(el => {
+    el.addEventListener("change", () => {
+      draft.fases[Number(el.dataset.fi)].dias[Number(el.dataset.di)].ejercicios[Number(el.dataset.ei)].cat = el.value;
+      render();
+    });
+  });
+  document.querySelectorAll('[data-action="b-ex-del"]').forEach(el => {
+    el.addEventListener("click", () => {
+      draft.fases[Number(el.dataset.fi)].dias[Number(el.dataset.di)].ejercicios.splice(Number(el.dataset.ei), 1);
+      render();
+    });
+  });
+}
+
+function commitBuilder() {
+  const draft = state.builderDraft;
+  if (!draft.nombre.trim()) { alert("Ponele un nombre al ciclo."); return; }
+  if (draft.fases.length === 0) { alert("Agregá al menos una fase."); return; }
+  for (const f of draft.fases) {
+    if (f.dias.length === 0) { alert(`La fase "${f.nombre}" necesita al menos un día.`); return; }
+    for (const d of f.dias) {
+      if (d.ejercicios.length === 0) { alert(`El día "${d.nombre}" necesita al menos un ejercicio.`); return; }
+      for (const e of d.ejercicios) {
+        if (!e.nombre.trim()) { alert(`Hay un ejercicio sin nombre en "${d.nombre}".`); return; }
+      }
+    }
+  }
+
+  const faseObj = {};
+  draft.fases.forEach((f, i) => {
+    const key = "fase" + (i + 1);
+    const semanas = weekRange(f.semanaInicio, f.semanaFin);
+    const deload = (f.deload || []).filter(w => semanas.includes(w));
+    const dias = {};
+    f.dias.forEach((d, di) => {
+      const nombreDia = (d.nombre && d.nombre.trim()) || ("Día " + (di + 1));
+      dias[nombreDia] = d.ejercicios.map(e => [e.cat, e.nombre, e.series]);
+    });
+    faseObj[key] = { nombre: f.nombre || key, rango: f.rango || "", semanas, deload, dias };
+  });
+
+  const key = state.builderOriginalKey || ("ciclo-" + Date.now().toString(36));
+  state.programs[key] = { nombre: draft.nombre, fases: faseObj };
+  savePrograms();
+
+  state.programKey = key;
+  const firstFase = Object.keys(faseObj)[0];
+  state.phaseKey = firstFase;
+  state.day = Object.keys(faseObj[firstFase].dias)[0];
+  state.week = faseObj[firstFase].semanas[0];
+  state.view = "tracker";
+  state.builderDraft = null;
+  render();
+}
+
+// ---------------------------------------------------------------------------
+// BACKUP: EXPORTAR / IMPORTAR / RESET
+// ---------------------------------------------------------------------------
+function buildBackupPayload() {
+  return {
+    app: "plan5fases",
+    version: 3,
+    exportado: new Date().toISOString(),
+    programs: state.programs,
+    progreso: state.progreso,
+  };
+}
+function backupFilename() {
+  return `plan5fases-respaldo-${new Date().toISOString().slice(0,10)}.json`;
+}
+function showToast(msg, isError) {
+  document.querySelectorAll(".toast").forEach(t => t.remove());
+  const el = document.createElement("div");
+  el.className = "toast" + (isError ? " toast-error" : "");
+  el.textContent = msg;
+  document.body.appendChild(el);
+  requestAnimationFrame(() => el.classList.add("show"));
+  setTimeout(() => { el.classList.remove("show"); setTimeout(() => el.remove(), 300); }, 4000);
+}
+
+// Descarga con estrategias en cascada: revocar la URL demasiado rapido, o
+// disparar la descarga dentro de una PWA instalada en pantalla completa,
+// son causas conocidas de que un <a download> falle en silencio en Android.
+function triggerDownload(jsonStr, filename) {
+  const blob = new Blob([jsonStr], { type: "application/json" });
+
+  try {
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = filename;
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    // revocar recien despues de un rato: revocar de inmediato puede cortar
+    // la descarga en algunos navegadores/PWAs instaladas
+    setTimeout(() => URL.revokeObjectURL(url), 5000);
+    showToast("Descarga iniciada — revisá tu carpeta Descargas.");
+    return;
+  } catch (e) {
+    console.warn("Fallo descarga por anchor:", e);
+  }
+
+  try {
+    const url = URL.createObjectURL(blob);
+    window.open(url, "_blank");
+    setTimeout(() => URL.revokeObjectURL(url), 8000);
+    showToast("Se abrió el respaldo en una pestaña — guardalo desde ahí.");
+    return;
+  } catch (e) {
+    console.warn("Fallo descarga por ventana nueva:", e);
+  }
+
+  showToast("No se pudo descargar automáticamente. Probá 'Compartir a Drive'.", true);
+}
+
+function exportBackup() {
+  const payload = buildBackupPayload();
+  triggerDownload(JSON.stringify(payload, null, 2), backupFilename());
+}
+
+function shareBackup() {
+  const payload = buildBackupPayload();
+  const jsonStr = JSON.stringify(payload, null, 2);
+  const filename = backupFilename();
+  try {
+    const blob = new Blob([jsonStr], { type: "application/json" });
+    const file = new File([blob], filename, { type: "application/json" });
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      navigator.share({ files: [file], title: "Respaldo Plan 5 Fases" })
+        .then(() => showToast("Compartido."))
+        .catch((err) => {
+          if (err && err.name === "AbortError") return; // el usuario cerro el menu, no es un error
+          triggerDownload(jsonStr, filename); // si el share falla, caemos a descarga directa igual
+        });
+      return;
+    }
+  } catch (e) {
+    console.warn("Fallo share:", e);
+  }
+  // Sin soporte de Web Share: no dejamos al usuario en un callejon sin salida,
+  // resolvemos con la descarga directa de una.
+  triggerDownload(jsonStr, filename);
+}
+function importBackup(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const data = JSON.parse(reader.result);
+      if (data && data.programs && typeof data.programs === "object") {
+        if (!window.confirm("Esto reemplaza TODOS tus ciclos y tu progreso en este dispositivo por los del archivo. ¿Continuar?")) return;
+        state.programs = data.programs;
+        state.progreso = data.progreso || {};
+      } else if (data && data.progreso) {
+        if (!window.confirm("Este es un respaldo antiguo (solo progreso, sin ciclos). Se reemplaza el progreso actual. ¿Continuar?")) return;
+        state.progreso = data.progreso;
+      } else {
+        throw new Error("Formato inválido");
+      }
+      state.programKey = Object.keys(state.programs)[0];
+      savePrograms();
+      scheduleSaveProgreso();
+      render();
+    } catch (err) {
+      alert("No se pudo leer el archivo de respaldo. Verificá que sea un JSON exportado desde esta misma página.");
+    }
+  };
+  reader.readAsText(file);
+  e.target.value = "";
+}
+function resetTodo() {
+  if (!window.confirm("¿Borrar el progreso guardado de este ciclo y dispositivo? Los ciclos (estructura) NO se borran, solo los checks y pesos. Esta acción no se puede deshacer.")) return;
+  state.progreso[state.programKey] = {};
+  scheduleSaveProgreso();
+  render();
+}
+
+// ---------------------------------------------------------------------------
+// INIT
+// ---------------------------------------------------------------------------
+state.programs = loadPrograms();
+state.progreso = loadProgreso();
+state.programKey = Object.keys(state.programs)[0];
+{
+  const prog = activeProgram();
+  const fk = Object.keys(prog.fases)[0];
+  state.phaseKey = fk;
+  state.day = dayKeysOf(prog.fases[fk])[0];
+  state.week = prog.fases[fk].semanas[0];
+}
+render();
+</script>
+</body>
+</html>
