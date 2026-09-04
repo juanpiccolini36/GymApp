@@ -40,6 +40,8 @@
   .menu-dropdown.open{display:block;}
   .menu-item{display:block;width:100%;text-align:left;padding:.6rem .8rem;background:transparent;border:none;color:#E8E6E1;font-family:'IBM Plex Mono',monospace;font-size:.74rem;cursor:pointer;}
   .menu-item:hover{background:#22262B;}
+  .menu-item-danger{color:#D68A8A;border-top:1px solid #2A2E33;}
+  .menu-item-danger:hover{background:#2A1414;}
   .edit-banner{background:#12202A;border:1px solid #2A4A5E;color:#9FC6DE;padding:.55rem .8rem;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:.72rem;line-height:1.5;margin-bottom:.9rem;}
   .row-edit{background:#161A1E;}
   .row-edited{background:#1E1A12;}
@@ -466,6 +468,7 @@ function render() {
               <button class="menu-item" data-action="new-cycle">Nuevo ciclo</button>
               <button class="menu-item" data-action="edit-structure">Editar estructura de este ciclo</button>
               <button class="menu-item" data-action="toggle-edit">${state.editMode ? "✓ Salir de edición rápida" : "Editar ejercicios (rápido)"}</button>
+              <button class="menu-item menu-item-danger" data-action="program-delete">Eliminar este ciclo</button>
             </div>
           </div>
         </div>
@@ -475,7 +478,6 @@ function render() {
         <select class="program-select" data-action="program-select">
           ${progKeys.map(k => `<option value="${k}" ${k===state.programKey?"selected":""}>${escapeAttr(state.programs[k].nombre)}</option>`).join("")}
         </select>
-        ${progKeys.length > 1 ? `<button class="btn-ghost btn-sm btn-danger" data-action="program-delete">Eliminar ciclo</button>` : ""}
       </div>
 
       <nav class="tabs phase-tabs">
@@ -668,9 +670,17 @@ function attachListeners() {
   });
   const programDelete = document.querySelector('[data-action="program-delete"]');
   if (programDelete) programDelete.addEventListener("click", () => {
+    state.menuOpen = false;
     const keys = Object.keys(state.programs);
-    if (keys.length <= 1) return;
-    if (!window.confirm(`¿Eliminar el ciclo "${activeProgram().nombre}"? Se borra también su progreso guardado. Esta acción no se puede deshacer.`)) return;
+    if (keys.length <= 1) {
+      render();
+      showToast("No podés eliminar el único ciclo que tenés. Creá uno nuevo antes de borrar este.", true);
+      return;
+    }
+    if (!window.confirm(`¿Eliminar el ciclo "${activeProgram().nombre}"? Se borra también su progreso guardado. Esta acción no se puede deshacer.`)) {
+      render();
+      return;
+    }
     const delKey = state.programKey;
     delete state.programs[delKey];
     if (state.progreso[delKey]) delete state.progreso[delKey];
